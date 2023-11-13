@@ -15,6 +15,7 @@
 
 import Greeting from "@/components/Greeting";
 import NavigationBar from "@/components/Navigation";
+import Footer from "@/components/footer";
 interface ButtonsProps {
   text: string;
   disabled: boolean;
@@ -60,7 +61,14 @@ const Home = () => {
         corporis fugiat minima consequuntur ex, unde laborum temporibus
         delectus?
       </p>
+      <Avatar />
+      <Footer />
     </>
   );
 };
+import Image from 'next/image'
+ 
+export function Avatar() {
+  return <Image src="/me.png" alt="me" width="164" height="164" />
+}
 export default Home;

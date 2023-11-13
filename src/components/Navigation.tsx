@@ -1,10 +1,12 @@
 const NavigationBar = () => {
   return (
-    <nav className="navigation">
+    <div className="navigationContainer">
+      <nav className="navigation">
         <NavItem text="home" href="/" />
         <NavItem text="about" href="/about" />
         <NavItem text="contact" href="/contact" />
-    </nav>
+      </nav>
+    </div>
   );
 };
 interface NavItemProps {
@@ -15,7 +17,9 @@ interface NavItemProps {
 const NavItem = ({ text, href }: NavItemProps) => {
   return (
     <>
-        <a href={href} target="_blank">{text}</a>
+      <a href={href} target="_blank">
+        {text}
+      </a>
     </>
   );
 };

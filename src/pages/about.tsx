@@ -1,3 +1,4 @@
+import Footer from "@/components/footer";
 import NavigationBar from "../components/Navigation";
 const AboutPage = () => {
   return (
@@ -8,11 +9,18 @@ const AboutPage = () => {
       <ListItem text="I am learning to code 💻" />
       <ListItem text="I have a pet piranha 🐡" />
       <ListItem text="I like hiking active volcanoes 🥾" />
+      <Avatar />
+      <Footer />
     </>
   );
 };
 interface ListItemProps {
   text: string;
+}
+import Image from "next/image";
+
+export function Avatar() {
+  return <Image src="/me.png" alt="me" width="164" height="164" />;
 }
 const ListItem = ({ text }: ListItemProps) => {
   return (
